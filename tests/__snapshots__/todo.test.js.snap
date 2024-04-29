@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Queries fetches list of todos 1`] = `
+{
+  "data": {
+    "getTodos": [
+      {
+        "completed": false,
+        "description": "Description 1",
+        "id": "1",
+        "title": "Test Todo 1",
+      },
+      {
+        "completed": false,
+        "description": "Description 2",
+        "id": "2",
+        "title": "Test Todo 2",
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": {
+    "headers": Headers {
+      Symbol(map): {},
+    },
+  },
+}
+`;

@@ -1,0 +1,23 @@
+service: graphql-todo-service
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  environment:
+    MONGODB_URI: ${env:MONGODB_URI}
+
+functions:
+  graphql:
+    handler: src/index.handler
+    events:
+      - http:
+          path: graphql
+          method: post
+      - http:
+          path: graphql
+          method: get
+
+plugins:
+  - serverless-offline
