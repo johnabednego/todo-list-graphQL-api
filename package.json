@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "IS_OFFLINE=true node src/index.js",
-    "dev": "IS_OFFLINE=true nodemon src/index.js",
+    "start": "IS_OFFLINE=true node index.js",
+    "dev": "IS_OFFLINE=true nodemon index.js",
     "deploy": "serverless deploy",
     "test": "jest"
   },

@@ -2,12 +2,12 @@ require('dotenv').config();
 const { gql } = require('apollo-server-lambda');
 const { createTestClient } = require('apollo-server-testing');
 const { ApolloServer } = require('apollo-server-lambda');
-const typeDefs = require('../src/schemas/typeDefs');
-const resolvers = require('../src/resolvers/todoResolvers');
-const connectDB = require('../src/utils/db');
+const typeDefs = require('../schemas/typeDefs');
+const resolvers = require('../resolvers/todoResolvers');
+const connectDB = require('../utils/db');
 const mongoose = require('mongoose');
 
-jest.mock('../src/models/todo', () => ({
+jest.mock('../models/todo', () => ({
   find: jest.fn().mockResolvedValue([
     {
       id: '1',
